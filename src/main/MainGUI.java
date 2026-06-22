@@ -329,7 +329,11 @@ public class MainGUI {
         btnGuess.addActionListener(e -> {
             SoundManager.playSound("click.wav");
             String input = inputField.getText().trim();
-            if (input.equalsIgnoreCase("S")) { inputField.setText(""); btnShop.doClick(); return; } // Hỗ trợ nhấn phím tắt nhanh 'S' mở nhanh cửa hàng
+            if (input.equalsIgnoreCase("SKIP")) {
+                currentLevel++;
+                startNewLevel();
+                return;
+            } // Hỗ trợ nhấn phím tắt nhanh 'S' mở nhanh cửa hàng
             if (input.isEmpty()) { hintLabel.setText("Nhập số đi kìa!"); return; }
 
             int guess;
