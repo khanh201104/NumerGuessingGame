@@ -226,8 +226,6 @@ public class MainGUI {
         Random random = new Random();
         secretNumber = random.nextInt((currentMax - currentMin) + 1) + currentMin;
 
-        // Dòng lệnh Log in kết quả đáp án ra Console phục vụ Dev thực hiện kiểm thử nhanh (Hack test)
-        System.out.println("====== [TEST] Số bí mật màn " + currentLevel + " là: " + secretNumber + " ======");
 
         // Đẩy đồng bộ chuỗi văn bản thông số mới lên các nhãn hiển thị giao diện
         if (lblCardLevel != null) lblCardLevel.setText("Cấp độ: " + currentLevel);
