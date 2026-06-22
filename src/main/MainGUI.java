@@ -278,7 +278,7 @@ public class MainGUI {
 
             if (choice == 0) {
                 if (gold < 50) { CustomDialogs.showMessage(parentFrame, "LỖI", "Bạn không đủ Vàng!", CustomDialogs.TYPE_ERROR); }
-                else { gold -= 50; itemsUsed++; lblTopGold.setText(" " + gold); SoundManager.playSound("levelup.wav"); String secretStr = String.valueOf(secretNumber); int randomCharIndex = new Random().nextInt(secretStr.length()); CustomDialogs.showMessage(parentFrame, "GỢI Ý QUÀ TẶNG", "Chữ số ở vị trí thứ " + (randomCharIndex + 1) + " là: " + secretStr.charAt(randomCharIndex), CustomDialogs.TYPE_INFO); }
+                else { gold -= 50; itemsUsed++; lblTopGold.setText(" " + gold); SoundManager.playSound("levelup.wav"); String secretStr = String.valueOf(secretNumber); int randomCharIndex = new Random().nextInt(secretStr.length()); CustomDialogs.showMessage(parentFrame, "GỢI Ý", "Chữ số ở vị trí thứ " + (randomCharIndex + 1) + " là: " + secretStr.charAt(randomCharIndex), CustomDialogs.TYPE_INFO); }
             } else if (choice == 1) {
                 if (gold < 30) { CustomDialogs.showMessage(parentFrame, "LỖI", "Bạn không đủ Vàng!", CustomDialogs.TYPE_ERROR); }
                 else { gold -= 30; itemsUsed++; lblTopGold.setText(" " + gold); SoundManager.playSound("levelup.wav"); int midPoint = (currentMin + currentMax) / 2; if (secretNumber <= midPoint) currentMax = midPoint; else currentMin = midPoint + 1; infoLabel.setText("Khoảng đoán: [ " + currentMin + "  -  " + currentMax + " ]"); }
