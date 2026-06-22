@@ -213,7 +213,6 @@ public class MainGUI {
         Random random = new Random();
         secretNumber = random.nextInt((currentMax - currentMin) + 1) + currentMin;
 
-        System.out.println("====== [TEST] Số bí mật màn " + currentLevel + " là: " + secretNumber + " ======");
 
         if (lblCardLevel != null) lblCardLevel.setText("Cấp độ: " + currentLevel);
         if (lblTopScore != null) lblTopScore.setText("ĐIỂM: " + totalScore);
