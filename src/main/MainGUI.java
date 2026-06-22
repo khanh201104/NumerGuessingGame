@@ -331,6 +331,12 @@ public class MainGUI {
             String input = inputField.getText().trim();
             if (input.equalsIgnoreCase("SKIP")) {
                 currentLevel++;
+                if(currentLevel > 30){
+                SoundManager.playSound("win_game.wav");
+                CustomDialogs.showMessage(parentFrame, "PHÁ ĐẢO THÀNH CÔNG!", "Tổng điểm của bạn: " + totalScore, CustomDialogs.TYPE_SUCCESS);
+                saveGameResult(parentFrame); // Lưu bản ghi điểm số người chơi vào file csv
+                cardLayout.show(mainPanel, "MainMenu");
+                }
                 startNewLevel();
                 return;
             } // Hỗ trợ nhấn phím tắt nhanh 'S' mở nhanh cửa hàng
