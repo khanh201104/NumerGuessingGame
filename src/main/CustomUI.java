@@ -86,7 +86,7 @@ public class CustomUI {
             JPanel headerPanel = new JPanel(new BorderLayout());
             headerPanel.setOpaque(false);
 
-            JLabel title = new JLabel("CỬA HÀNG QUÀ TẶNG", SwingConstants.CENTER);
+            JLabel title = new JLabel("CỬA HÀNG", SwingConstants.CENTER);
             title.setFont(new Font(FONT_CUTE, Font.BOLD, 32));
             title.setForeground(BTN_YELLOW);
             title.setBorder(BorderFactory.createEmptyBorder(0, 40, 0, 0));
