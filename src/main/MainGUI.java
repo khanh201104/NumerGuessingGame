@@ -289,7 +289,7 @@ public class MainGUI {
                     SoundManager.playSound("levelup.wav");
                     String secretStr = String.valueOf(secretNumber);
                     int randomCharIndex = new Random().nextInt(secretStr.length());
-                    CustomDialogs.showMessage(parentFrame, "GỢI Ý QUÀ TẶNG", "Chữ số ở vị trí thứ " + (randomCharIndex + 1) + " là: " + secretStr.charAt(randomCharIndex), CustomDialogs.TYPE_INFO);
+                    CustomDialogs.showMessage(parentFrame, "GỢI Ý", "Chữ số ở vị trí thứ " + (randomCharIndex + 1) + " là: " + secretStr.charAt(randomCharIndex), CustomDialogs.TYPE_INFO);
                 }
             } else if (choice == 1) {
                 if (gold < 30) { CustomDialogs.showMessage(parentFrame, "LỖI", "Bạn không đủ Vàng!", CustomDialogs.TYPE_ERROR); }
