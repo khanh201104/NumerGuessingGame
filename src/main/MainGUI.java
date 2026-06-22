@@ -292,7 +292,6 @@ public class MainGUI {
         btnGuess.addActionListener(e -> {
             SoundManager.playSound("click.wav");
             String input = inputField.getText().trim();
-            if (input.equalsIgnoreCase("S")) { inputField.setText(""); btnShop.doClick(); return; }
             if (input.isEmpty()) { hintLabel.setText("Nhập số đi kìa!"); return; }
             int guess;
             try { guess = Integer.parseInt(input); } catch (NumberFormatException ex) { hintLabel.setText("Chỉ nhập số thôi!"); inputField.setText(""); return; }
